@@ -53,9 +53,61 @@
 
 <h2 id="users">Users</h2>
 
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/users/create</td>
+<td>email, password, full_name</td>
+</tr>
+</tbody></table>
+
 <h2 id="session">Session</h2>
 
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/sessions/create</td>
+<td>email, password</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/sessions/destroy</td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h2 id="matches">Matches</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/matches/index</td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/matches/show</td>
+<td>id</td>
+</tr>
+</tbody></table>
 
 <h2 id="applications">Applications</h2>
 
