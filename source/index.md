@@ -111,6 +111,45 @@ POST | /api/v1/candidate/bookmark/create | match_id 또는 job_description_id
 DELETE | /api/v1/candidate/bookmark/destroy | id
 
 ## Applications
+> GET /api/v1/candidate/application result lloks like this:
+
+```json
+{
+  "applications": [
+    {
+      "id": 1,
+      "company_name": "The Ventures",
+      "job_description_title": "Web Frontend Engineer",
+      "experience_range_start": null,
+      "experience_range_end": null,
+      "key_skills": [
+        {
+          "trait_name": "Java"
+        },
+        {
+          "trait_name": "ass"
+        },
+        {
+          "trait_name": "zzz"
+        },
+        {
+          "trait_name": "dsfsdf"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "page_count": 1
+  }
+}
+```
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /api/v1/candidate/application | 
+GET | /api/v1/candidate/application | id
+POST | /api/v1/candidate/application/create | match_id
+
+
 ## Profile
 > GET /api/v1/candidate/profile result looks like this:
 
