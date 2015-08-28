@@ -22,7 +22,21 @@ Welcome to Careerfully API!
 # APIs
 
 ## Users
+Method | Path | Params 
+-------------- | -------------- | --------------
+POST | /users/create | email, password, full_name
+
 ## Session
+Method | Path | Params 
+-------------- | -------------- | --------------
+POST | /sessions/create | email, password
+DELETE | /sessions/destroy | 
+
 ## Matches
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /matches/index | 
+GET | /matches/show | id
+
 ## Applications
 ## Profile
