@@ -26,6 +26,15 @@ Method | Path | Params
 -------------- | -------------- | --------------
 POST | /users/create | email, password, full_name
 
+```JSON
+{
+  "id": 2,
+  "name": "Isis",
+  "breed": "unknown",
+  "fluffiness": 5,
+  "cuteness": 10
+}
+
 ## Session
 Method | Path | Params 
 -------------- | -------------- | --------------
