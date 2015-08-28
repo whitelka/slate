@@ -62,7 +62,7 @@
 </thead><tbody>
 <tr>
 <td>POST</td>
-<td>/users/create</td>
+<td>/api/v1/user</td>
 <td>email, password, full_name</td>
 </tr>
 </tbody></table>
@@ -78,13 +78,8 @@
 </thead><tbody>
 <tr>
 <td>POST</td>
-<td>/sessions/create</td>
+<td>/api/v1/session</td>
 <td>email, password</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/sessions/destroy</td>
-<td></td>
 </tr>
 </tbody></table>
 
@@ -99,52 +94,130 @@
 </thead><tbody>
 <tr>
 <td>GET</td>
-<td>/matches/index</td>
+<td>/api/v1/candidate/matches</td>
 <td></td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/matches/show</td>
+<td>/api/v1/candidate/match</td>
 <td>id</td>
 </tr>
 </tbody></table>
-<pre class="highlight plaintext"><code>{
-  "profile": {
-    "id": 1,
-    "address": null,
-    "preferences_traits": {
-      "domain": [
-        {
-          "trait_id": 1,
-          "trait_name": "mobile game"
-        }
-      ],
-      "platform": [
-        {
-          "trait_id": 19,
-          "trait_name": "CentOS"
-        }
-      ],
-      "programming_language": [
-        {
-          "trait_id": 10,
-          "trait_name": "Java"
-        }
-      ],
-      "tool": [
-        {
-          "trait_id": 20,
-          "trait_name": "CentOS"
-        }
-      ]
-    }
-  }
-}
-</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"match"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"job_description_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"bookmarked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"applied"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Ventures"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"job_description_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Web Frontend Engineer"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"experience_range_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"experience_range_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bangalore test"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"qualifications"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"key_skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"domains"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system programming"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"programming_languages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Java"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"industries"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"tools"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"specific_technologies"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nt">"concepts"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h2 id="bookmarks">Bookmarks</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/api/v1/candidate/bookmarks</td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/v1/candidate/bookmark</td>
+<td>id</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/v1/candidate/bookmark/create</td>
+<td>match_id 또는 job_description_id</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/v1/candidate/bookmark/destroy</td>
+<td>id</td>
+</tr>
+</tbody></table>
 
 <h2 id="applications">Applications</h2>
 
 <h2 id="profile">Profile</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/candidate/profile</td>
+<td></td>
+</tr>
+</tbody></table>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"preferences_traits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mobile game"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"platform"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CentOS"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"programming_language"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Java"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"tool"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CentOS"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 
           <h1 id="errors">Errors</h1>
 
