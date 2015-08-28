@@ -111,7 +111,7 @@ POST | /api/v1/candidate/bookmark/create | match_id 또는 job_description_id
 DELETE | /api/v1/candidate/bookmark/destroy | id
 
 ## Applications
-> GET /api/v1/candidate/application result lloks like this:
+> GET /api/v1/candidate/applications result lloks like this:
 
 ```json
 {
@@ -143,9 +143,29 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
   }
 }
 ```
+> GET /api/v1/candidate/offers result lloks like this:
+```json
+{
+  "offers": [
+    {
+      "id": 1,
+      "company_name": "The Ventures",
+      "job_description_title": "Web Frontend Engineer",
+      "experience_range_start": null,
+      "experience_range_end": null,
+      "key_skills": []
+    }
+  ],
+  "meta": {
+    "page_count": 1
+  }
+}
+```
+
 Method | Path | Params 
 -------------- | -------------- | --------------
-GET | /api/v1/candidate/application | 
+GET | /api/v1/candidate/applications | 
+GET | /api/v1/candidate/offers | 
 GET | /api/v1/candidate/application | id
 POST | /api/v1/candidate/application/create | match_id
 
