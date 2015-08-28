@@ -24,20 +24,66 @@ Welcome to Careerfully API!
 ## Users
 Method | Path | Params 
 -------------- | -------------- | --------------
-POST | /users/create | email, password, full_name
+POST | /api/v1/user | email, password, full_name
 
 ## Session
 Method | Path | Params 
 -------------- | -------------- | --------------
-POST | /sessions/create | email, password
-DELETE | /sessions/destroy | 
+POST | /api/v1/session | email, password
 
 ## Matches
 Method | Path | Params 
 -------------- | -------------- | --------------
-GET | /matches/index | 
-GET | /matches/show | id
-``` JSON
+GET | /api/v1/candidate/matches | 
+GET | /api/v1/candidate/match | id
+``` json
+{
+  "match": {
+    "id": 4,
+    "job_description_id": 2,
+    "bookmarked": false,
+    "applied": true,
+    "company_name": "The Ventures",
+    "job_description_title": "Web Frontend Engineer",
+    "experience_range_start": null,
+    "experience_range_end": null,
+    "address": "bangalore test",
+    "qualifications": {
+      "key_skills": [],
+      "domains": [
+        {
+          "trait_name": "system programming"
+        }
+      ],
+      "programming_languages": [
+        {
+          "trait_name": "Java"
+        }
+      ],
+      "industries": [],
+      "platforms": [],
+      "roles": [],
+      "tools": [],
+      "specific_technologies": [],
+      "concepts": []
+    }
+  }
+}
+```
+## Bookmarks
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /api/v1/candidate/bookmarks | 
+GET | /api/v1/candidate/bookmark | id
+POST | /api/v1/candidate/bookmark/create | match_id 또는 job_description_id
+DELETE | /api/v1/candidate/bookmark/destroy | id
+
+## Applications
+## Profile
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /candidate/profile | 
+``` json
 {
   "profile": {
     "id": 1,
@@ -71,5 +117,4 @@ GET | /matches/show | id
   }
 }
 ```
-## Applications
-## Profile
+
