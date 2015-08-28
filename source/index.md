@@ -32,8 +32,9 @@ Method | Path | Params
 POST | /api/v1/session | email, password
 
 ## Matches
--> GET /api/v1/candidate/matches result looks like this:
-``` json
+> GET /api/v1/candidate/matches result looks like this:
+
+```json
 {
   "matches": [
     {
@@ -60,8 +61,9 @@ POST | /api/v1/session | email, password
   }
 }
 ```
--> GET /api/v1/candidate/match result looks like this:
-``` json
+> GET /api/v1/candidate/match result looks like this:
+
+```json
 {
   "match": {
     "id": 4,
@@ -110,8 +112,9 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
 
 ## Applications
 ## Profile
--> GET /api/v1/candidate/profile result looks like this:
-``` json
+> GET /api/v1/candidate/profile result looks like this:
+
+```json
 {
   "profile": {
     "id": 1,
@@ -134,7 +137,7 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
           "trait_id": 10,
           "trait_name": "Java"
         }
-      ],
+      ], 
       "tool": [
         {
           "trait_id": 20,
@@ -145,7 +148,48 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
   }
 }
 ```
+
+> GET /api/v1/candidate/profile/traits result looks like this:
+
+```json
+{
+  "role": {
+    "recommanded_traits": [],
+    "traits": []
+  },
+  "domain": {
+    "recommanded_traits": [],
+    "traits": [
+      {
+        "id": 1,
+        "name": "mobile game"
+      },
+      {
+        "id": 2,
+        "name": "system programming"
+      },
+      {
+        "id": 3,
+        "name": "network programming"
+      },
+      {
+        "id": 4,
+        "name": "Product QA"
+      },
+      {
+        "id": 5,
+        "name": "phone protocol stack"
+      },
+      {
+        "id": 6,
+        "name": "web frontend"
+      }
+    ]
+  }
+}
+```
 Method | Path | Params 
 -------------- | -------------- | --------------
-GET | /candidate/profile | 
+GET | /api/v1/candidate/profile | 
+GET | /api/v1/candidate/profile/traits | trait_types[] 
 
