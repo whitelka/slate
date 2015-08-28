@@ -32,10 +32,35 @@ Method | Path | Params
 POST | /api/v1/session | email, password
 
 ## Matches
-Method | Path | Params 
--------------- | -------------- | --------------
-GET | /api/v1/candidate/matches | 
-GET | /api/v1/candidate/match | id
+-> GET /api/v1/candidate/matches result looks like this:
+``` json
+{
+  "matches": [
+    {
+      "id": 4,
+      "job_description_id": 2,
+      "bookmarked": false,
+      "applied": true,
+      "company_name": "The Ventures",
+      "job_description_title": "Web Frontend Engineer",
+      "key_skills": []
+    },
+    {
+      "id": 3,
+      "job_description_id": 1,
+      "bookmarked": false,
+      "applied": false,
+      "company_name": "Seedtime",
+      "job_description_title": "SW Engineer",
+      "key_skills": []
+    }
+  ],
+  "meta": {
+    "page_count": 1
+  }
+}
+```
+-> GET /api/v1/candidate/match result looks like this:
 ``` json
 {
   "match": {
@@ -70,6 +95,11 @@ GET | /api/v1/candidate/match | id
   }
 }
 ```
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /api/v1/candidate/matches | 
+GET | /api/v1/candidate/match | id
+
 ## Bookmarks
 Method | Path | Params 
 -------------- | -------------- | --------------
@@ -80,9 +110,7 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
 
 ## Applications
 ## Profile
-Method | Path | Params 
--------------- | -------------- | --------------
-GET | /candidate/profile | 
+-> GET /api/v1/candidate/profile result looks like this:
 ``` json
 {
   "profile": {
@@ -117,4 +145,7 @@ GET | /candidate/profile |
   }
 }
 ```
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /candidate/profile | 
 
