@@ -66,29 +66,85 @@
 <td>email, password, full_name</td>
 </tr>
 </tbody></table>
+
+<h2 id="session">Session</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>/sessions/create</td>
+<td>email, password</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/sessions/destroy</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="matches">Matches</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Path</th>
+<th>Params</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/matches/index</td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/matches/show</td>
+<td>id</td>
+</tr>
+</tbody></table>
 <pre class="highlight plaintext"><code>{
-  "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "profile": {
+    "id": 1,
+    "address": null,
+    "preferences_traits": {
+      "domain": [
+        {
+          "trait_id": 1,
+          "trait_name": "mobile game"
+        }
+      ],
+      "platform": [
+        {
+          "trait_id": 19,
+          "trait_name": "CentOS"
+        }
+      ],
+      "programming_language": [
+        {
+          "trait_id": 10,
+          "trait_name": "Java"
+        }
+      ],
+      "tool": [
+        {
+          "trait_id": 20,
+          "trait_name": "CentOS"
+        }
+      ]
+    }
+  }
 }
-
-## Session
-Method | Path | Params 
--------------- | -------------- | --------------
-POST | /sessions/create | email, password
-DELETE | /sessions/destroy | 
-
-## Matches
-Method | Path | Params 
--------------- | -------------- | --------------
-GET | /matches/index | 
-GET | /matches/show | id
-
-## Applications
-## Profile
 </code></pre>
+
+<h2 id="applications">Applications</h2>
+
+<h2 id="profile">Profile</h2>
 
           <h1 id="errors">Errors</h1>
 
