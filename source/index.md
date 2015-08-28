@@ -120,22 +120,19 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
       "id": 1,
       "company_name": "The Ventures",
       "job_description_title": "Web Frontend Engineer",
+      "job_description_id": 2,
       "experience_range_start": null,
       "experience_range_end": null,
-      "key_skills": [
-        {
-          "trait_name": "Java"
-        },
-        {
-          "trait_name": "ass"
-        },
-        {
-          "trait_name": "zzz"
-        },
-        {
-          "trait_name": "dsfsdf"
-        }
-      ]
+      "key_skills": []
+    },
+    {
+      "id": 2,
+      "company_name": "Seedtime",
+      "job_description_title": "SW Engineer",
+      "job_description_id": 1,
+      "experience_range_start": null,
+      "experience_range_end": null,
+      "key_skills": []
     }
   ],
   "meta": {
@@ -151,6 +148,7 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
       "id": 1,
       "company_name": "The Ventures",
       "job_description_title": "Web Frontend Engineer",
+      "job_description_id": 2,
       "experience_range_start": null,
       "experience_range_end": null,
       "key_skills": []
@@ -167,7 +165,7 @@ Method | Path | Params
 GET | /api/v1/candidate/applications | 
 GET | /api/v1/candidate/offers | 
 GET | /api/v1/candidate/application | id
-POST | /api/v1/candidate/application/create | match_id
+POST | /api/v1/candidate/application/create | job_description_id
 
 
 ## Profile
