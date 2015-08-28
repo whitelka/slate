@@ -213,22 +213,19 @@
       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="nt">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Ventures"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"job_description_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Web Frontend Engineer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"job_description_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="nt">"experience_range_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="nt">"experience_range_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"key_skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Java"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ass"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zzz"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dsfsdf"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
+      </span><span class="nt">"key_skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seedtime"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"job_description_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SW Engineer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"job_description_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"experience_range_start"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"experience_range_end"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"key_skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -246,6 +243,7 @@
       &quot;id&quot;: 1,
       &quot;company_name&quot;: &quot;The Ventures&quot;,
       &quot;job_description_title&quot;: &quot;Web Frontend Engineer&quot;,
+      &quot;job_description_id&quot;: 2,
       &quot;experience_range_start&quot;: null,
       &quot;experience_range_end&quot;: null,
       &quot;key_skills&quot;: []
@@ -283,7 +281,7 @@
 <tr>
 <td>POST</td>
 <td>/api/v1/candidate/application/create</td>
-<td>match_id</td>
+<td>job_description_id</td>
 </tr>
 </tbody></table>
 
@@ -338,28 +336,28 @@
     </span><span class="nt">"recommanded_traits"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
     </span><span class="nt">"traits"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mobile game"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mobile game"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system programming"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system programming"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"network programming"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"network programming"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product QA"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Product QA"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone protocol stack"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone protocol stack"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web frontend"</span><span class="w">
+        </span><span class="nt">"trait_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"trait_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"web frontend"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
