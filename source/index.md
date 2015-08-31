@@ -163,10 +163,48 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
 Method | Path | Params 
 -------------- | -------------- | --------------
 GET | /api/v1/candidate/applications | 
-GET | /api/v1/candidate/offers | 
 GET | /api/v1/candidate/application | id
-POST | /api/v1/candidate/application/create | job_description_id
+POST | /api/v1/candidate/application/create | job_description_id or match_id
 
+## Offers
+> GET /api/v1/candidate/offers result lloks like this:
+
+```json
+{
+  "offers": [
+    {
+      "id": 1,
+      "company_name": "The Ventures",
+      "job_description_title": "Web Frontend Engineer",
+      "job_description_id": 2,
+      "experience_range_start": null,
+      "experience_range_end": null,
+      "key_skills": []
+    }
+  ],
+  "meta": {
+    "page_count": 1
+  }
+}
+```
+
+> GET /api/v1/candidate/offer result lloks like this:
+
+```json
+{
+  "id": 1,
+  "job_description_title": "Web Frontend Engineer",
+  "job_description_id": 2,
+  "company_name": "The Ventures",
+  "current_stage": "applied",
+  "key_skills": []
+}
+```
+
+Method | Path | Params 
+-------------- | -------------- | --------------
+GET | /api/v1/candidate/offers | 
+GET | /api/v1/candidate/offer | 
 
 ## Profile
 > GET /api/v1/candidate/profile result looks like this:
