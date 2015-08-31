@@ -256,28 +256,28 @@ GET | /api/v1/candidate/offer |
     "recommanded_traits": [],
     "traits": [
       {
-        "id": 1,
-        "name": "mobile game"
+        "trait_id": 1,
+        "trait_name": "mobile game"
       },
       {
-        "id": 2,
-        "name": "system programming"
+        "trait_id": 2,
+        "trait_name": "system programming"
       },
       {
-        "id": 3,
-        "name": "network programming"
+        "trait_id": 3,
+        "trait_name": "network programming"
       },
       {
-        "id": 4,
-        "name": "Product QA"
+        "trait_id": 4,
+        "trait_name": "Product QA"
       },
       {
-        "id": 5,
-        "name": "phone protocol stack"
+        "trait_id": 5,
+        "trait_name": "phone protocol stack"
       },
       {
-        "id": 6,
-        "name": "web frontend"
+        "trait_id": 6,
+        "trait_name": "web frontend"
       }
     ]
   }
