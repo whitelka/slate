@@ -111,7 +111,7 @@ POST | /api/v1/candidate/bookmark/create | match_id 또는 job_description_id
 DELETE | /api/v1/candidate/bookmark/destroy | id
 
 ## Applications
-> GET /api/v1/candidate/applications result lloks like this:
+> GET /api/v1/candidate/applications result looks like this:
 
 ```json
 {
@@ -140,7 +140,7 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
   }
 }
 ```
-> GET /api/v1/candidate/offers result lloks like this:
+> GET /api/v1/candidate/offers result looks like this:
 ```json
 {
   "offers": [
@@ -167,7 +167,7 @@ GET | /api/v1/candidate/application | id
 POST | /api/v1/candidate/application/create | job_description_id or match_id
 
 ## Offers
-> GET /api/v1/candidate/offers result lloks like this:
+> GET /api/v1/candidate/offers result looks like this:
 
 ```json
 {
@@ -188,7 +188,7 @@ POST | /api/v1/candidate/application/create | job_description_id or match_id
 }
 ```
 
-> GET /api/v1/candidate/offer result lloks like this:
+> GET /api/v1/candidate/offer result looks like this:
 
 ```json
 {
