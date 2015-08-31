@@ -75,8 +75,8 @@ POST | /api/v1/session | email, password
     "experience_range_start": null,
     "experience_range_end": null,
     "address": "bangalore test",
+    "key_skills": [],
     "qualifications": {
-      "key_skills": [],
       "domains": [
         {
           "trait_name": "system programming"
@@ -140,25 +140,6 @@ DELETE | /api/v1/candidate/bookmark/destroy | id
   }
 }
 ```
-> GET /api/v1/candidate/offers result looks like this:
-```json
-{
-  "offers": [
-    {
-      "id": 1,
-      "company_name": "The Ventures",
-      "job_description_title": "Web Frontend Engineer",
-      "job_description_id": 2,
-      "experience_range_start": null,
-      "experience_range_end": null,
-      "key_skills": []
-    }
-  ],
-  "meta": {
-    "page_count": 1
-  }
-}
-```
 
 Method | Path | Params 
 -------------- | -------------- | --------------
@@ -192,12 +173,34 @@ POST | /api/v1/candidate/application/create | job_description_id or match_id
 
 ```json
 {
-  "id": 1,
-  "job_description_title": "Web Frontend Engineer",
+ "id": 4,
   "job_description_id": 2,
+  "bookmarked": false,
+  "applied": true,
   "company_name": "The Ventures",
-  "current_stage": "applied",
-  "key_skills": []
+  "job_description_title": "Web Frontend Engineer",
+  "experience_range_start": null,
+  "experience_range_end": null,
+  "address": "bangalore test",
+  "key_skills": [],
+  "qualifications": {
+    "domains": [
+      {
+        "trait_name": "system programming"
+      }
+    ],
+    "programming_languages": [
+      {
+        "trait_name": "Java"
+      }
+    ],
+    "industries": [],
+    "platforms": [],
+    "roles": [],
+    "tools": [],
+    "specific_technologies": [],
+    "concepts": []
+  }
 }
 ```
 
