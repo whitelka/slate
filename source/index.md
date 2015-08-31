@@ -175,8 +175,6 @@ POST | /api/v1/candidate/application/create | job_description_id or match_id
 {
  "id": 4,
   "job_description_id": 2,
-  "bookmarked": false,
-  "applied": true,
   "company_name": "The Ventures",
   "job_description_title": "Web Frontend Engineer",
   "experience_range_start": null,
