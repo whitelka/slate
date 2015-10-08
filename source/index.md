@@ -19,8 +19,6 @@ Welcome to Careerfully API!
 
 # Authentication
 
-# APIs
-
 ## Users Sign Up
 Method | Path | Params 
 -------------- | -------------- | --------------
@@ -53,6 +51,8 @@ Method | Path | Params
 POST | /api/v1/session | email, password
 POST | /aii/v1/session/facebook | facebook_access_token
 POST | /aii/v1/session/linkedin | facebook_access_token
+
+# APIs
 
 ## Matches
 > GET /api/v1/candidate/matches result looks like this:
