@@ -29,12 +29,6 @@ POST | /api/v1/user/facebook | facebook_access_token
 POST | /api/v1/user/linkedin | 
 
 ## Session (Sign In)
-Method | Path | Params 
--------------- | -------------- | --------------
-POST | /api/v1/session | email, password
-POST | /aii/v1/session/facebook | facebook_access_token
-POST | /aii/v1/session/linkedin | facebook_access_token
-
 > POST /api/v1/session/facebook success result looks like this:
 
 ```json
@@ -48,11 +42,17 @@ POST | /aii/v1/session/linkedin | facebook_access_token
 ```
 
 > POST /api/v1/session/facebook fail result looks like this:
+
 ```json
 {
   "error": "unauthorized"
 }
 ```
+Method | Path | Params 
+-------------- | -------------- | --------------
+POST | /api/v1/session | email, password
+POST | /aii/v1/session/facebook | facebook_access_token
+POST | /aii/v1/session/linkedin | facebook_access_token
 
 ## Matches
 > GET /api/v1/candidate/matches result looks like this:
