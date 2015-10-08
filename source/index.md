@@ -21,15 +21,20 @@ Welcome to Careerfully API!
 
 # APIs
 
-## Users
+## Users Sign Up
 Method | Path | Params 
 -------------- | -------------- | --------------
 POST | /api/v1/user | email, password, full_name
+POST | /api/v1/user/facebook | facebook_access_token
+POST | /api/v1/user/linkedin | 
 
-## Session
+## Session (Sign In)
 Method | Path | Params 
 -------------- | -------------- | --------------
 POST | /api/v1/session | email, password
+POST | /aii/v1/session/facebook | facebook_access_token
+POST | /aii/v1/session/linkedin | facebook_access_token
+
 
 ## Matches
 > GET /api/v1/candidate/matches result looks like this:
@@ -205,7 +210,7 @@ POST | /api/v1/candidate/application/create | job_description_id or match_id
 Method | Path | Params 
 -------------- | -------------- | --------------
 GET | /api/v1/candidate/offers | 
-GET | /api/v1/candidate/offer | 
+GET | /api/v1/candidate/offer | id
 
 ## Profile
 > GET /api/v1/candidate/profile result looks like this:
