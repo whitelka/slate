@@ -1,3 +1,3 @@
 # Introduction
 
-Welcome to Careerfully API!
+Welcome to JobForSure API documentation. Those API support JobForSure Application Service.
